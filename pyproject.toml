@@ -1,0 +1,22 @@
+[project]
+name = "project-monitor"
+version = "0.1.0"
+description = "Desktop monitoring and control dashboard for local development projects"
+requires-python = ">=3.12"
+dependencies = [
+    "PySide6>=6.7",
+    "SQLAlchemy>=2.0",
+    "psutil>=6.0",
+    "watchdog>=4.0",
+]
+
+[project.scripts]
+project-monitor = "main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
